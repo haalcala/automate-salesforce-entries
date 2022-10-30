@@ -78,6 +78,17 @@ button:focus-visible {
   border-radius: 3px;
   flex-grow: 1;
   flex: 1;
+
+
+  justify-content: center;
+  align-items: center  
+}
+
+.calendar_day_head {
+    border: 1px dashed green;
+
+  justify-content: center;
+  align-items: center
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,16 +1,18 @@
-import moment from "moment"
+import moment from "moment";
 
 function getDays() {
-    
-    const date = new Date()
+  const date = new Date();
 
-    date.setDate(1)
-    
-    const days:{day:number}[]= ("1".repeat(moment(date).daysInMonth()).split("1")).map((i, day) => ({day, dow:moment(date).add(day, "d").weekday()}))
+  date.setDate(1);
 
-    return [days, moment(date).weekday()]
+  const days: { day: number }[] = "1"
+    .repeat(moment(date).daysInMonth() - 1)
+    .split("1")
+    .map((i, day) => ({ day, dow: moment(date).add(day, "d").weekday() }));
+
+  return [days, moment(date).weekday()];
 }
 
 export default {
-    getDays
-}
+  getDays,
+};
