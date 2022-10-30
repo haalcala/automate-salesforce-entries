@@ -53,6 +53,33 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.calendar_container {
+  border: 1px solid blue;
+  flex-direction: column;
+}
+
+.calendar_row {
+  border: 1px dashed green;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.calendar_week {
+  display: flex;
+  flex:1
+}
+
+.calendar_day {
+  min-width: 100px;
+  min-height: 100px;
+  padding: 3px;
+  border: .5px solid grey;
+  border-radius: 3px;
+  flex-grow: 1;
+  flex: 1;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -63,5 +90,15 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .calendar_day {
+    border: 1px solid black
+  }
+
+  .calendar_row {
+    flex-direction: column;
   }
 }

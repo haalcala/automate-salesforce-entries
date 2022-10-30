@@ -34,7 +34,7 @@ export default function App() {
     setAnchorEl(null);
   };
 
-  const days = utils.getDays()
+  const [days, startDayAtDayOfWeek] = utils.getDays()
 
   return (
     <div>
@@ -100,8 +100,8 @@ export default function App() {
           </Toolbar>
         </AppBar>
       </Box>
-      <div style={{ padding: "10px" }}>
-        <Calendar title='year month' startDayAtDayOfWeek={0} days={days} />
+      <div style={{ padding: "10px", border: "1px solid red" }}>
+        <Calendar title='year month' startDayAtDayOfWeek={startDayAtDayOfWeek} days={days} />
       </div>
     </div>
   );

@@ -1,19 +1,14 @@
-function getDays() {
-    const days:{day:number}[]= []
+import moment from "moment"
 
+function getDays() {
+    
     const date = new Date()
 
-    const month = date.getMonth()
+    date.setDate(1)
+    
+    const days:{day:number}[]= new Array(moment(date).daysInMonth()).map((i, day) => ({day}))
 
-    for (let day = 1; day <= 31; day++) {
-        date.setDate(day)
-
-        if (date.getMonth() === month) {
-            days.push({day})
-        }
-    }
-
-    return days
+    return [days, moment(date).weekday()]
 }
 
 export default {
