@@ -54,12 +54,12 @@ button:focus-visible {
 }
 
 .calendar_container {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   flex-direction: column;
 }
 
 .calendar_row {
-  border: 1px dashed green;
+  /* border: 1px dashed green; */
   display: flex;
   /* justify-content: center; */
   /* align-items: center; */
@@ -95,7 +95,7 @@ button:focus-visible {
 
 @media screen and (max-width: 600px) {
   .calendar_day {
-    border: 1px solid black
+    /* border: 1px solid black */
   }
 
   .calendar_row {

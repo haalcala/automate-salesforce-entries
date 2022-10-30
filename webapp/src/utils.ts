@@ -6,7 +6,7 @@ function getDays() {
 
     date.setDate(1)
     
-    const days:{day:number}[]= new Array(moment(date).daysInMonth()).map((i, day) => ({day}))
+    const days:{day:number}[]= ("1".repeat(moment(date).daysInMonth()).split("1")).map((i, day) => ({day, dow:moment(date).add(day, "d").weekday()}))
 
     return [days, moment(date).weekday()]
 }
