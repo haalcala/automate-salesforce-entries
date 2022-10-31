@@ -61,13 +61,15 @@ button:focus-visible {
 .calendar_row {
   border: 1px dashed green;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: space-around;
+  align-items: center;
 }
 
 .calendar_week {
   display: flex;
-  flex:1
+  flex:1;
+  justify-content: center;
+  align-items: center;
 }
 
 .calendar_day {
@@ -85,17 +87,20 @@ button:focus-visible {
 }
 
 .calendar_day_head {
-    margin: auto;
+    /* margin: auto; */
+    /* min-width: 100px; */
+    /* border: 1px solid green */
+
 }
 
-.callendar_weekend {
+.calendar_weekend {
   background-color: #ddd;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #fff;
   }
   a:hover {
     color: #747bff;
@@ -105,9 +110,13 @@ button:focus-visible {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .calendar_day {
     /* border: 1px solid black */
+  }
+
+  .calendar_day_head {
+    display: none;
   }
 
   .calendar_day_blank {
@@ -116,5 +125,7 @@ button:focus-visible {
 
   .calendar_row {
     flex-direction: column;
+    justify-content: unset;
+    align-items: stretch;
   }
 }
