@@ -110,6 +110,10 @@ button:focus-visible {
     /* border: 1px solid black */
   }
 
+  .calendar_day_blank {
+    display: none;
+  }
+
   .calendar_row {
     flex-direction: column;
   }
