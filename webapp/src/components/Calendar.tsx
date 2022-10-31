@@ -30,7 +30,7 @@ export default function Calendar({ title = "default title", days, startDayAtDayO
               .split("1")
               .map((_, dayi) => (
                 <div key={dayi} className="calendar_week">
-                  <div className="calendar_day">{day < days.length && ((rowi == 0 && dayi >= startDayAtDayOfWeek) || rowi > 0) ? day++ + 1 : ""}</div>
+                  <div className={"calendar_day" + (dayi == 0 || dayi == 6 ? " callendar_weekend" : "")}>{day < days.length && ((rowi == 0 && dayi >= startDayAtDayOfWeek) || rowi > 0) ? day++ + 1 : ""}</div>
                 </div>
               ))}
           </div>

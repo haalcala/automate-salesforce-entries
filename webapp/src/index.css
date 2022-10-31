@@ -59,7 +59,7 @@ button:focus-visible {
 }
 
 .calendar_row {
-  /* border: 1px dashed green; */
+  border: 1px dashed green;
   display: flex;
   /* justify-content: center; */
   /* align-items: center; */
@@ -85,10 +85,11 @@ button:focus-visible {
 }
 
 .calendar_day_head {
-    border: 1px dashed green;
+    margin: auto;
+}
 
-  justify-content: center;
-  align-items: center
+.callendar_weekend {
+  background-color: #ddd;
 }
 
 @media (prefers-color-scheme: light) {
